@@ -1,0 +1,107 @@
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Dosis&family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+	 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Quicksand&display=swap" rel="stylesheet"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title> Akmal Web </title>
+	<style>
+		body{
+			font-family : "Quicksand";
+			color : white;
+			padding : 40px;
+			background-color: #1e1e21;
+		}
+		.links{
+			background-color: transparent;
+			border-style : none;
+			color : cyan;
+			text-decoration: none;
+		}
+		.links:hover{
+			color : purple;
+		}
+		.buttons{
+			background-color: #3d4b5c;
+			padding : 15px;
+			color : white;
+			text-decoration: none;
+		}
+	</style>
+	<script>
+		function show(id , id1){
+			var x = document.getElementById(id);
+			var y = document.getElementById(id1);
+			
+			if (x.style.display == "none"){
+				if (id == "perkenalan"){
+					y.innerHTML = "[Sembunyikan konten perkenalan]";
+				}
+				else if (id == "proyek"){
+					y.innerHTML = "[Sembunyikan konten proyek]";
+				}
+				else if (id == "sosial_media"){
+					y.innerHTML = "[Sembuyikan konten sosial media]";
+				}
+				x.style.display = "block";
+			}
+			else{
+				if (id == "perkenalan"){
+					y.innerHTML = "[Munculkan konten perkenalan]";
+				}
+				else if (id == "proyek"){
+					y.innerHTML = "[Munculkan konten proyek]";
+				}
+				else if (id == "sosial_media"){
+					y.innerHTML = "[Munculkan konten sosial media]";
+				}
+				x.style.display="none";
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<h1> Selamat datang di website ini! </h1>
+	<a href="#perkenalan" class='buttons'> Perkenalan</a>
+	<a href="#proyek" class="buttons"> Proyek</a>
+	<a href="#sosial_media" class='buttons'> Sosial media </a>
+	<br>
+	<br>
+	<button type='button' onclick="show('perkenalan' , 'x1')" class='links' id='x1'>[Sembunyikan konten perkenalan]</button>
+	<div id="perkenalan">
+	<h3> Perkenalan </h3>
+	Hai nama saya Akmal.
+	<br>
+	Saya lahir di Yogyakarta pada 30 mei 2005.
+	<br>
+	Saya tertarik dengan pemrograman dan sejarah
+	<br>
+	Saya belajar pemrograman sejak umur 13 tahun karena beberapa artikel tentang pemrograman yang saya temukan di internet
+	</div>
+	<br>
+	<br>
+	<button type='button' onclick="show('proyek' , 'x2')" class='links' id='x2'>[Sembunyikan konten proyek]</button>
+	<div id="proyek">
+	<h3> Proyek </h3>
+	<h4> Music player </h4>
+	<a href="https://github.com/tamaa01/musicplayer" class='links'>Klik disini untuk melihat proyek</a><br></br>
+	<h4> Rainy discord bot </h4>
+	<a href="https://rainybot.github.io" class='links'>Rainy discord bot website</a>
+	<h4> Simple calculator</h4>
+	<a href="https://github.com/tamaa01/Simple-calculator" class="links">Klik disini untuk melihat proyek</a>
+	<br></br>
+	<h4>Pemutar musik </h4>
+	<a href="https://github.com/tamaa01/musicplayer-pyqt5" class="links">Klik disini untuk melihat proyek</a>
+	</div>
+	<br>
+	<button type="button" onclick="show('sosial_media' , 'x3')" id='x3' class='links'>[Sembunyikan konten sosial media]</button>
+	<div id="sosial_media">
+		<h3> Sosial media </h3>
+		<li> Discord : Tamaaa#5938 </li>
+		<li> Instagram : akmal341_ </li>
+	</div>
+</body>
