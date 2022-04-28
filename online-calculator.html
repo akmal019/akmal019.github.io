@@ -1,0 +1,102 @@
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+
+	<title> Web Calculator </title>
+	<script>
+		function addnum(num){
+			var x = document.getElementById("column");
+			x.value = x.value + num;
+		}
+
+		function deletetext(){
+			var x = document.getElementById("column");
+			var text = x.value;
+			var removed_text = text.slice(0 , -1);
+			x.value = removed_text;
+		}
+
+		function result(){
+			var x = document.getElementById("column");
+			try{
+				var result = eval(x.value);
+				x.value = result;
+			}
+			catch(err){
+				x.value = err;
+			}
+		}
+
+		function clear1(){
+			var x = document.getElementById("column");
+			x.value = "";
+		}
+	</script>
+	<style>
+		body{
+			font-family : "Raleway";
+			background-color : #2d2e30;
+			color : white;
+		}
+		.buttons{
+			font-family : "Raleway";
+			font-size : 20px;
+			border-style : none;
+			border-radius : 3px;
+			margin : 0.5px;
+			width : 50;
+			height : 50;
+		}
+		#column{
+			font-family : "Raleway";
+			font-size : 20px;
+			width : 220;
+			border-radius : 3px;
+			border-style : none;
+			margin : 0.5px;
+			height: 50;
+		}
+		.buttons:hover{
+			background-color : #d3d9e3;
+		}
+	</style>
+
+</head>
+
+<body>
+	<form autocomplete="off">
+		<center>
+			<h2> Web Kalkulator</h2>
+			<h4> Pembuat : Akmal</h4>
+		<div id="main">
+			<input type="text" id="column">
+			<br>
+			<button type="button" class="buttons" onclick="deletetext()"><</button>
+			<button type="button" class="buttons" onclick="addnum('1')">1</button>
+			<button type="button" class="buttons" onclick="addnum('2')">2</button>
+			<button type="button" class="buttons" onclick="addnum('3')">3</button>
+			<br>
+			<button type="button" class="buttons" onclick="addnum('4')">4</button>
+			<button type="button" class="buttons" onclick="addnum('5')">5</button>
+			<button type="button" class="buttons" onclick="addnum('6')">6</button>
+			<button type="button" class="buttons" onclick="addnum('7')">7</button>
+			<br>
+			<button type="button" class="buttons" onclick="addnum('8')">8</button>
+			<button type="button" class="buttons" onclick="addnum('9')">9</button>
+			<button type="button" class="buttons" onclick="addnum('0')">0</button>
+			<button type="button" class="buttons" onclick="addnum('+')">+</button>
+			<br>
+			<button type="button" class="buttons" onclick="addnum('-')">-</button>
+			<button type="button" class="buttons" onclick="addnum('/')">/</button>
+			<button type="button" class="buttons" onclick="addnum('*')">x</button>
+			<button type="button" class="buttons" onclick="result()">=</button>
+			<br>
+			<button type="button" class="buttons" onclick="addnum('(')">(</button>
+			<button type="button" class="buttons" onclick="addnum(')')">)</button>
+			<button type="button" class="buttons" onclick="addnum('.')">.</button>
+			<button type="button" class="buttons" onclick="clear1()">C</button>
+		</div>
+	</form>
+</center>
+</body>
