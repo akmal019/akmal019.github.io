@@ -1,116 +1,88 @@
 <head>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Dosis&family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
-	 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Quicksand&display=swap" rel="stylesheet"> 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<title> Akmal Web </title>
-	<style>
-		body{
-			font-family : "Quicksand";
-			color : white;
-			padding : 10px;
-			background-color: #1e1e21;
-		}
-		.links{
-			background-color: transparent;
-			border-style : none;
-			color : cyan;
-			text-decoration: none;
-		}
-		.links:hover{
-			color : purple;
-		}
-		.buttons{
-			background-color: #3d4b5c;
-			padding : 15px;
-			color : white;
-			transition: 0.5s;
-			text-decoration: none;
-		}
-		.buttons:hover{
-			opacity: 0.5;
-		}
-	</style>
-	<script>
-		function show(id , id1){
-			var x = document.getElementById(id);
-			var y = document.getElementById(id1);
-			
-			if (x.style.display == "none"){
-				if (id == "perkenalan"){
-					y.innerHTML = "[Sembunyikan konten perkenalan]";
-				}
-				else if (id == "proyek"){
-					y.innerHTML = "[Sembunyikan konten proyek]";
-				}
-				else if (id == "sosial_media"){
-					y.innerHTML = "[Sembuyikan konten sosial media]";
-				}
-				x.style.display = "block";
-			}
-			else{
-				if (id == "perkenalan"){
-					y.innerHTML = "[Munculkan konten perkenalan]";
-				}
-				else if (id == "proyek"){
-					y.innerHTML = "[Munculkan konten proyek]";
-				}
-				else if (id == "sosial_media"){
-					y.innerHTML = "[Munculkan konten sosial media]";
-				}
-				x.style.display="none";
-			}
-		}
-	</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&family=Space+Mono&display=swap" rel="stylesheet">
+    <title> Website portofolio Muhammad Akmal </title>
+<style>
+body{
+    background-color : #dde9eb;
+    font-family : 'Noto Sans' , sans-serif;
+}
+.banner{
+    background-color : #7cd985;
+    border : none;
+    padding : 5px;
+}
+.buttons{
+    background-color : #2e9e5b;
+    border : none;
+    color : black;
+    text-decoration : none;
+    transition : 0.5s;
+    padding : 5px;
+}
+.buttons:hover{
+    background-color : #218047;
+}
+a{
+    transition : 0.5s;
+    color : blue;
+    text-decoration : none;
+}
+a:hover{
+    opacity : 50%;
+}
+.biography{
+    padding : 5px;
+    font-size : 15px;
+}
+</style>
 </head>
 
 <body>
-	<h1> Selamat datang di website ini! </h1>
-	<img src="https://c.tenor.com/DlRZa66A_Q0AAAAM/yuki-nagato-mouse-wave.gif" width="200"><br>
-	<br>
-	<a href="#perkenalan" class='buttons'> Perkenalan</a>
-	<a href="#proyek" class="buttons"> Proyek</a>
-	<a href="#sosial_media" class='buttons'> Sosial media </a>
-	<br>
-	<br>
-	<button type='button' onclick="show('perkenalan' , 'x1')" class='links' id='x1'>[Sembunyikan konten perkenalan]</button>
-	<div id="perkenalan">
-	<h3> Perkenalan </h3>
-	Hai nama saya Akmal.
-	<br>
-	Saya lahir di Yogyakarta pada 30 mei 2005.
-	<br>
-	Saya tertarik dengan pemrograman dan sejarah
-	<br>
-	Saya belajar pemrograman sejak umur 13 tahun karena beberapa artikel tentang pemrograman yang saya temukan di internet
-	</div>
-	<br>
-	<br>
-	<button type='button' onclick="show('proyek' , 'x2')" class='links' id='x2'>[Sembunyikan konten proyek]</button>
-	<div id="proyek">
-	<h3> Proyek </h3>
-	<h4> Music player </h4>
-	<a href="https://github.com/tamaa01/musicplayer" class='links'>Klik disini untuk melihat proyek</a><br></br>
-	<h4> Rainy discord bot </h4>
-	<a href="https://rainybot.github.io" class='links'>Rainy discord bot website</a>
-	<h4> Simple calculator</h4>
-	<a href="https://github.com/tamaa01/Simple-calculator" class="links">Klik disini untuk melihat proyek</a>
-	<br></br>
-	<h4>Pemutar musik </h4>
-	<a href="https://github.com/tamaa01/musicplayer-pyqt5" class="links">Klik disini untuk melihat proyek</a>
-	<br>
-	<h4> Kalkulator Online </h4>
-	<a href="online-calculator.html" class="links">Klik disini untuk melihat proyek</a>
-	</div>
-	<br>
-	<button type="button" onclick="show('sosial_media' , 'x3')" id='x3' class='links'>[Sembunyikan konten sosial media]</button>
-	<div id="sosial_media">
-		<h3> Sosial media </h3>
-		<li> Discord : Tamaaa#5938 </li>
-		<li> Instagram : akmal341_ </li>
-	</div>
+    <div class="banner">
+        <h2> Selamat datang! </h2>
+        <a href="#perkenalan" class="buttons"> Perkenalan </a>
+        <a href="#proyek" class="buttons"> Proyek </a>
+        <a href="#kontak" class="buttons"> Kontak </a>
+        <br><br>
+
+    </div>
+    <div class="biography">
+    <div id="perkenalan">
+        <h2> Perkenalan </h2>
+        <p> Perkenalkan nama saya adalah Muhammad Akmal Sani Pratama. Saya adalah mahasiswa Universitas Negeri Sunan Kalijaga. Saya pernah bersekolah di SMA Negeri 2 Banguntapan dan SMP Negeri 1 Banguntapan. Hobi saya adalah mendengarkan musik.</p><br>
+    </div>
+
+    <div id="proyek">
+        <h2> Proyek </h2>
+        <h3> Berikut adalah proyek yang pernah saya buat </h3>
+        <li><a href="https://github.com/tamaasn/ASN-musicplayer"> ASN Music Player </a></li>
+        <p> ASN Music Player adalah sebuah pemutar musik sederhana yang saya buat menggunakan wxwidgets dan bahasa pemrograman C++. Program ini menggunakan SDL mixer untuk output audio.</p>
+        <li><a href="https://github.com/tamaasn/simple-notepad"> Simple notepad</a></li>
+        <p> Simple Notepad adalah aplikasi text editor sederhana yang saya buat menggunakan wxwidgets dan bahasa pemrograman  C++.</p>
+        <li><a href="https://asnimage.pythonanywhere.com/">ASNImage , image converter to ASCII</a></li>
+        <p> ASNImage adalah sebuah website sederhana yang saya buat menggunakan flask dan python. Website ini dapat mengubah sebuah foto menjadi ASCII </p>
+        <li><a href="https://tamach.pythonanywhere.com/">TamaCH</a></li>
+        <p> TamaCH adalah sebuah website chatroom sederhana yang saya buat menggunakan python dan django framework </p>
+        <li><a href="https://github.com/tamaasn/flying-bird">Flying Bird</a></li>
+        <p> Flying Bird adalah sebuah game berbasis SDL sederhana yang terinspirasi dengan game populer bernama "Flappy Bird". Game ini saya kembangkan menggunakan bahasa pemrograman C++.</p>
+        <li><a href="https://github.com/tamaasn/plane_shooter">Plane Shooter</a></li>
+        <p> Plane shooter adalah game tembak-tembakan sederhana berbasis SDL yang saya kembangkan menggunakan bahasa pemrograman C++</p>
+        <li><a href="https://github.com/tamaasn/video-to-ascii"> Video to ASCII</a></li>
+        <p> Video to ASCII adalah program sederhana yang dapat memutar video dalam bentuk ASCII art</p>
+        <li><a href="https://akmalblog.pythonanywhere.com/">Akmal Blog</a></li>
+        <p> Blog pribadi</p>
+    </div>
+    <br>
+    <div id="kontak">
+        <h2> Kontak </h3>
+        Email : tamaasn@yahoo.com<br>
+    </div>
+    <br>
+    <a href="https://github.com/tamaasn"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width=50></a>
+    </div>
+
+
 </body>
