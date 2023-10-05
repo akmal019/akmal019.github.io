@@ -1,0 +1,41 @@
+<head>
+	<title> Contoh soal fungsi invers </title>
+	<script>
+		function cek(){
+			var jawab = document.getElementById("jawab");
+			var indikasi = document.getElementById("indikasi");
+			if (jawab.value == "2"){
+				indikasi.innerHTML = "Jawaban benar!";
+				indikasi.style.color = "green";
+			}else{
+				indikasi.innerHTML = "Jawaban salah!";
+				indikasi.style.color = "red";
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<h1> Contoh soal invers fungsi oleh Muhammad Akmal Sani Pratama </h1>
+	<h1> NIM : 23106050036 </h1>
+	<h3> Contoh soal pertama </h3>
+	<p> f(x)=2x+3 </p>
+	<p> Kita definisikan y sebagai f(x) </p>
+	<p> y=2x+3 </p>
+	<p> y-3=2x </p>
+	<p> <sup>y-3</sup>/<sub>2</sub>=x</p>
+	<p> Jadi hasil invers dari f(x)=2x+3 adalah f<sup>-1</sup>(x)=<sup>y-3</sup>/<sub>2</sub></p>
+	<h3> Contoh soal kedua </h3>
+	<p> f(x)=x<sup>2</sup>-2x+1</p>
+	<p> Kita definisikan y sebagai f(x) </p>
+	<p> y = x<sup>2</sup>-2x+1</p>
+	<p> y = (x-1)<sup>2</sup></p>
+	<p> x-1 = &radic;y</p>
+	<p> x = 1+&radic;y</p>
+	<p> Jadi hasil invers dari f(x)=2x+3 adalah f<sup>-1</sup>(x)=1+&radic;x</p>
+	<h3> Contoh soal ketiga </h3>
+	<p> Jika f(x)=5x+2+x maka f<sup>-1</sup>(14) adalah... </p>
+	<input type="text" id="jawab" name="jawab">
+	<button type="button" onclick="cek()"> Jawab </button>
+	<h4 id="indikasi"> Indikasi jawaban benar/salah </h4>
+</body>
